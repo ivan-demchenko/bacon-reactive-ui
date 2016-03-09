@@ -19,6 +19,7 @@ export function initial() {
 }
 
 export function model(prev, actions) {
+
   return Bacon.combineTemplate({
     make: {
       value: actions.make,
@@ -33,4 +34,5 @@ export function model(prev, actions) {
       items: service.getSmths(actions.make, actions.model)
     }
   });
+
 }

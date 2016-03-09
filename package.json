@@ -3,7 +3,9 @@
     "dependencies": {
       "Matt-Esch/virtual-dom": "github:Matt-Esch/virtual-dom@^2.1.1",
       "baconjs": "npm:baconjs@^0.7.83",
-      "mithril": "npm:mithril@^0.2.3"
+      "mithril": "npm:mithril@^0.2.3",
+      "ramda": "npm:ramda@^0.19.1",
+      "sanctuary": "npm:sanctuary@^0.9.0"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",

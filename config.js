@@ -18,6 +18,8 @@ System.config({
     "baconjs": "npm:baconjs@0.7.83",
     "core-js": "npm:core-js@1.2.6",
     "mithril": "npm:mithril@0.2.3",
+    "ramda": "npm:ramda@0.19.1",
+    "sanctuary": "npm:sanctuary@0.9.0",
     "virtual-dom": "github:Matt-Esch/virtual-dom@2.1.1",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -69,6 +71,14 @@ System.config({
     },
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
+    },
+    "npm:ramda@0.19.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:sanctuary@0.9.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "ramda": "npm:ramda@0.19.1",
+      "sanctuary-def": "npm:sanctuary-def@0.4.0"
     },
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",
