@@ -1,6 +1,7 @@
 import run from './src/framework'
-import actions from './app/actions'
-import {model, initial} from './app/model'
-import view from './app/view'
+import appView from './app/appView'
+import appModel from './app/appModel'
+import appIntentions from './app/appIntentions'
+import appInitial from './app/appInitial'
 
-run(initial, model, actions, view, document.getElementById('app'));
+run( appView, appModel, appIntentions, appInitial, document.getElementById('app'));
