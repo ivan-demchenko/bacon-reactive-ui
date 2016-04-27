@@ -18,6 +18,7 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.35",
     "baconjs": "npm:baconjs@0.7.83",
     "core-js": "npm:core-js@1.2.6",
+    "q": "npm:q@1.4.1",
     "ramda": "npm:ramda@0.21.0",
     "virtual-dom": "npm:virtual-dom@2.1.1",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -85,6 +86,9 @@ System.config({
     },
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
+    },
+    "npm:q@1.4.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:ramda@0.21.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"

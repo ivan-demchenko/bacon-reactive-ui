@@ -6,21 +6,17 @@ import createElement from 'virtual-dom/create-element';
 
 export default function run(view, model, intention, initial, root) {
 
-  let initialNode = view(Bacon.once(initial))
-    .take(1)
+  return view(Bacon.once(initial))
     .map(createElement)
-    .toProperty();
-
-  initialNode.onValue(root.appendChild.bind(root))
-
-  view(model(intention(root.firstChild)))
+    .doAction(root.appendChild.bind(root))
+    .flatMap(rootNode =>
+      view(model(intention(rootNode)))
       .slidingWindow(2, 2)
       .map(R.apply(diff))
-      .combine(initialNode, (patches, rootNode) => {
-          return {
-              patches: patches,
-              rootNode: rootNode
-          }
-      })
-      .onValue(frame => window.requestAnimationFrame(_ => patch(frame.rootNode, frame.patches)))
+      .map(patches => ({
+          patches: patches,
+          rootNode: rootNode
+      }))
+    )
+    .onValue(frame => window.requestAnimationFrame(_ => patch(frame.rootNode, frame.patches)))
 }

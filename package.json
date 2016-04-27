@@ -3,6 +3,7 @@
     "dependencies": {
       "Matt-Esch/virtual-dom": "github:Matt-Esch/virtual-dom@^2.1.1",
       "baconjs": "npm:baconjs@^0.7.83",
+      "q": "npm:q@^1.4.1",
       "ramda": "npm:ramda@^0.21.0",
       "virtual-dom": "npm:virtual-dom@^2.1.1"
     },
